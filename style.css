@@ -11,5 +11,35 @@ body {
 }
 
 main {
-  
+  width: inherit;
+  min-height: inherit;
+}
+
+main > .main-header {
+  background-color: dodgerblue;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+main > .main-header > input[type="text"] {
+  flex-grow: 1;
+  margin: 0 1rem 0 1rem;
+}
+
+#container-img {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.5rem;
+  background-color: black;
+}
+
+img {
+  max-width: 30vw;
+  flex-grow: 2;
 }
