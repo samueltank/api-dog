@@ -1,22 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dogão.io</title>
-  <script src="./main.js" defer="defer"d></script>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main>
-    <header class="main-header">
-      <label for="raca">Pesquisar fotos da raça:</label>
-      <input type="text" id="raca" placeholder="DIGITE A RAÇA">
-      <input type="button" value="Pesquisar" id="pesquisar">
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dogão.io</title>
+    <script src="./main.js" defer="defer" d></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="modal.css">
+  </head>
+  <body>
+    <main>
+      <header class="main-header">
+        <label for="raca">Pesquisar fotos da raça:</label>
+        <input
+          type="text"
+          id="raca"
+          placeholder="DIGITE A RAÇA"
+          list="lista-racas"
+        />
+        <datalist id="lista-racas">
+        </datalist>
+        <input type="button" value="Pesquisar" id="pesquisar" />
+        <input type="button" value="Modal" id="abrir-modal">
+      </header>
 
-    <div id="container-img"></div>
-  </main>
-</body>
+      <div id="container-img"></div>
+    </main>
+
+    <div class="modal-container" id="modal">
+      <div class="modal-content">
+        <header>
+          <h2>Teste de modal</h2>
+          <form>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome">
+            <label for="celular">Celula:</label>
+            <input type="tel" name="celular" id="culular">
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email">
+          </form>
+        </header>
+
+        <footer>
+          <button id="btn-exit">Fechar</button>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
